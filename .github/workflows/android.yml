@@ -32,4 +32,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: AndroidOpenGLESLessons-Release-APK
-        path: app/build/outputs/apk/release/*.apk
+        path: **/*.apk
