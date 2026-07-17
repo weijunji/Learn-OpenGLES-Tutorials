@@ -15,22 +15,3 @@ allprojects {
         jcenter()
     }
 }
-
-android {
-    defaultConfig {
-        externalNativeBuild {
-            cmake {
-                abiFilters "arm64-v8a"
-            }
-        }
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled true
-            // Temporarily point to the debug signing config
-            signingConfig signingConfigs.debug 
-            // OR comment out the signingConfig line entirely
-        }
-    }
-}
