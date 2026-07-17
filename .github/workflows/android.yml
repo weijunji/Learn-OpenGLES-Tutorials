@@ -26,10 +26,10 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew assembleRelease
 
-    - name: Upload Debug APK
+    - name: Upload Release APK
       uses: actions/upload-artifact@v4
       with:
-        name: AndroidOpenGLESLessons-Debug-APK
+        name: AndroidOpenGLESLessons-Release-APK
         path: app/build/outputs/apk/release/*.apk
